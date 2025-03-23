@@ -8,7 +8,7 @@
 ## Step 1. Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/vorobeiDev/project-g7-contact-book-cli
+git clone https://github.com/PlatinumDCH/cli_notes.git
 ```
 2. Open project folder:
 ```
@@ -18,22 +18,16 @@ cd project_folder_name
 
 4. Create a virtual environment for Python:
 ```shell
-python -m venv /path/to/new/virtual/environment
+poetry init
+poetry install
 ```
 
 5. Activate the virtual environment:
-   - In cmd.exe, run:
+
     ```shell
-    venv\Scripts\activate.bat
+   poetry shell
     ```
-   - In PowerShell, run:
-   ```shell
-   venv\Scripts\Activate.ps1
-   ```
-6. Install required packages:
-```shell
-pip install -r requirements.txt
-```
+
 
 ## Step 2. Run the program or create executable file:
 
@@ -41,28 +35,6 @@ pip install -r requirements.txt
    ```shell
    python app.py
    ```
-
-### Crate build and run .exe file for Windows:
-1. Run command:
-```shell
-python setup.py build
-```
-2. Open folder /app.
-3. Run file g7cli.exe:
-```shell
-app/g7cli.exe
-```
-
-### Crate build and run file for macOS:
-1. Run command:
-```shell
-python setup.py bdist_mac
-```
-2. Open folder /app.
-3. Run file g7cli:
-```shell
-app/g7cli.exec
-```
 
 
 ## Commands
