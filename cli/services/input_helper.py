@@ -9,10 +9,12 @@ from prompt_toolkit.completion import NestedCompleter, WordCompleter
 from prompt_toolkit.shortcuts import prompt
 
 
+#  создает прогресс-бар для выполнение задачи
 def progress_bar():
     for _ in track(range(100), description='[yellow]Processing your request'):
         sleep(0.00001)
 
+#  вывод сообщений
 
 def rich_console_error(text, style="red"):
     console = Console()
@@ -36,7 +38,7 @@ def rich_console(text, style="green"):
     text = "✅   " + str(text)
     console.print(Panel(text, expand=True), style=style)
 
-
+#  отображение таблицы команд
 def print_hello():
     table = Table(title="Welcome to the G7 assistant bot!", style="yellow")
     table.add_column("Commands list", style="cyan", no_wrap=True)
@@ -87,6 +89,7 @@ def print_hello():
     console.print(table)
 
 
+#  автодополнение команды
 completer = NestedCompleter.from_nested_dict({
     "hello": None,
     "help": None,
